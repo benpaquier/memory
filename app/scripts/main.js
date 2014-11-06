@@ -20,8 +20,6 @@ $('.tuile').click(function(event){
 	virtualNames.push(currentClass);
 
 	if(nbClicks % 2 == 0) {
-		console.log(virtualNames[0]);
-		console.log(virtualNames[1]);
 		session.matchTuile(virtualNames[0], virtualNames[1]);
 		virtualNames = [];
 	}

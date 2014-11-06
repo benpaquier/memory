@@ -21,9 +21,23 @@ Session.prototype.printTuiles = function (number) {
 
 Session.prototype.matchTuile = function(name_1, name_2){
 	if(name_1 == name_2) {
-		console.log("c'est la meme");
+		_.delay(function () {
+			$('.' + name_1).fadeOut(1000);
+		}, 1000);
+
+		_.delay(function () {
+			$('.' + name_2).fadeOut(1000);
+		}, 1000);
 	}
 	else {
-		console.log("c'est aps pareil");
+		console.log("c'est pas pareil");
+
+	 	_.delay(function(){
+	 		$('.' + name_1).toggleClass(name_1);
+	 	}, 1000);
+
+		_.delay(function(){
+			$('.' + name_2).toggleClass(name_2);
+		}, 1000);
 	}
 };
