@@ -15,18 +15,18 @@ Session.prototype.createTuiles = function (){
 
 Session.prototype.printTuiles = function (number) {
 	for(var i = 0; i < number; i++){
-		$('.tuiles-container').append('<div class=\'col-md-2 tuile\' data-name=' + session.tuiles[i].name + '></div>');
+		$('.tuiles-container').append('<div class=\'tuile\' data-name=' + session.tuiles[i].name + '></div>');
 	}
 };
 
 Session.prototype.matchTuile = function(name_1, name_2){
 	if(name_1 == name_2) {
 		_.delay(function () {
-			$('.' + name_1).fadeOut(1000);
+			$('.' + name_1).css('opacity', '0');
 		}, 1000);
 
 		_.delay(function () {
-			$('.' + name_2).fadeOut(1000);
+			$('.' + name_2).css('opacity', '0');
 		}, 1000);
 	}
 	else {

@@ -24,3 +24,8 @@ $('.tuile').click(function(event){
 		virtualNames = [];
 	}
 });
+
+$('.refresh').click(function(event){
+	location.reload();
+
+});
